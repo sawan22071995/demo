@@ -1,17 +1,17 @@
 pipeline {
          agent any
          stages {
-                 stage('One') {
+                 stage('Checkout') {
                  steps {
-                     echo 'Hi, this is Zulaikha from edureka'
+                     echo 'Hi, this is pipeline project'
                  }
                  }
-                 stage('Two') {
+                 stage('Build') {
                  steps {
                     input('Do you want to proceed?')
                  }
                  }
-                 stage('Three') {
+                 stage('Test') {
                  when {
                        not {
                             branch "master"
@@ -21,10 +21,10 @@ pipeline {
                        echo "Hello"
                  }
                  }
-                 stage('Four') {
+                 stage('Deploy') {
                  
                               steps {
-                                echo "Running the integration test..."
+                                echo "Running the deployment..."
                               }
                            }
                           
